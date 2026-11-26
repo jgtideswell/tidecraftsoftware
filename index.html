@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tidecraft Software | Portfolio of UK Statutory SaaS Products</title>
-  <meta name="description" content="Tidecraft Software is an independent UK software studio crafting high-velocity, statutory compliance web applications including TempDiary and TriggerTrack." />
+  <title>Tidecraft Software | Independent Software Studio</title>
+  <meta name="description" content="Tidecraft Software is an independent UK software studio designing and building focused, lightweight web applications and digital tools." />
 
-  <!-- Google Fonts & FontAwesome -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -18,19 +17,19 @@
       --bg-surface: #0e1526;
       --bg-card: rgba(18, 27, 47, 0.72);
       --border: rgba(56, 189, 248, 0.15);
-      --border-hover: rgba(56, 189, 248, 0.45);
+      --border-hover: rgba(56, 189, 248, 0.42);
       --primary: #06b6d4;
-      --primary-glow: rgba(6, 182, 212, 0.35);
+      --primary-glow: rgba(6, 182, 212, 0.3);
       --secondary: #6366f1;
       --accent: #38bdf8;
-      --temp-accent: #f97316;
-      --temp-glow: rgba(249, 115, 22, 0.25);
-      --trigger-accent: #10b981;
-      --trigger-glow: rgba(16, 185, 129, 0.25);
       --text-main: #f1f5f9;
       --text-muted: #94a3b8;
       --radius: 20px;
-      --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      --transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     * {
@@ -40,20 +39,20 @@
     }
 
     body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       background-color: var(--bg-dark);
       color: var(--text-main);
       overflow-x: hidden;
-      line-height: 1.6;
-      background-image: 
-        radial-gradient(circle at 12% 18%, rgba(6, 182, 212, 0.1) 0%, transparent 45%),
-        radial-gradient(circle at 88% 65%, rgba(99, 102, 241, 0.1) 0%, transparent 45%),
+      line-height: 1.65;
+      background-image:
+        radial-gradient(circle at 12% 18%, rgba(6, 182, 212, 0.11) 0%, transparent 45%),
+        radial-gradient(circle at 88% 65%, rgba(99, 102, 241, 0.11) 0%, transparent 45%),
         radial-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px);
       background-size: 100% 100%, 100% 100%, 32px 32px;
     }
 
     .container {
-      max-width: 1200px;
+      max-width: 1140px;
       margin: 0 auto;
       padding: 0 24px;
     }
@@ -67,7 +66,7 @@
       z-index: 1000;
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
-      background: rgba(7, 10, 19, 0.85);
+      background: rgba(7, 10, 19, 0.84);
       border-bottom: 1px solid var(--border);
     }
 
@@ -75,18 +74,20 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 80px;
+      height: 76px;
+      gap: 20px;
     }
 
     .brand-logo {
-      display: flex;
+      display: inline-flex;
       align-items: center;
       gap: 12px;
       text-decoration: none;
       color: var(--text-main);
       font-weight: 800;
-      font-size: 1.35rem;
+      font-size: 1.3rem;
       letter-spacing: -0.5px;
+      flex-shrink: 0;
     }
 
     .brand-logo span {
@@ -105,7 +106,7 @@
     .nav-links a {
       text-decoration: none;
       color: var(--text-muted);
-      font-size: 0.95rem;
+      font-size: 0.94rem;
       font-weight: 500;
       transition: var(--transition);
     }
@@ -114,34 +115,35 @@
       color: var(--text-main);
     }
 
-    .nav-cta {
-      background: linear-gradient(135deg, #06b6d4, #6366f1);
-      color: #fff !important;
-      padding: 10px 22px;
-      border-radius: 9999px;
-      font-weight: 600 !important;
-      box-shadow: 0 4px 15px var(--primary-glow);
-      transition: var(--transition);
-    }
-
-    .nav-cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(6, 182, 212, 0.5);
-    }
-
     /* Hero */
     .hero {
-      padding: 175px 0 80px;
+      padding: 168px 0 84px;
       text-align: center;
     }
 
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.22);
+      padding: 7px 14px;
+      border-radius: 9999px;
+      margin-bottom: 26px;
+    }
+
     .hero h1 {
-      font-size: clamp(2.4rem, 5vw, 4.1rem);
+      font-size: clamp(2.4rem, 5vw, 4rem);
       font-weight: 800;
-      line-height: 1.15;
+      line-height: 1.14;
       letter-spacing: -1.5px;
-      max-width: 960px;
-      margin: 0 auto 24px;
+      max-width: 860px;
+      margin: 0 auto 22px;
     }
 
     .hero h1 .gradient-text {
@@ -151,60 +153,66 @@
     }
 
     .hero p {
-      font-size: 1.15rem;
+      font-size: 1.12rem;
       color: var(--text-muted);
-      max-width: 760px;
+      max-width: 660px;
       margin: 0 auto 36px;
     }
 
     .hero-actions {
       display: flex;
       justify-content: center;
-      gap: 16px;
+      gap: 14px;
       flex-wrap: wrap;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      padding: 13px 26px;
+      gap: 9px;
+      padding: 13px 24px;
       border-radius: 12px;
       font-weight: 600;
-      font-size: 0.98rem;
+      font-size: 0.95rem;
       text-decoration: none;
       transition: var(--transition);
       cursor: pointer;
     }
 
+    .btn svg {
+      width: 17px;
+      height: 17px;
+      flex-shrink: 0;
+    }
+
     .btn-primary {
       background: linear-gradient(135deg, #06b6d4, #4f46e5);
       color: #fff;
-      box-shadow: 0 8px 25px rgba(6, 182, 212, 0.3);
-      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 8px 25px rgba(6, 182, 212, 0.28);
+      border: 1px solid rgba(255, 255, 255, 0.14);
     }
 
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 12px 30px rgba(6, 182, 212, 0.45);
+      box-shadow: 0 12px 30px rgba(6, 182, 212, 0.42);
     }
 
     .btn-secondary {
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(255, 255, 255, 0.04);
       color: var(--text-main);
       border: 1px solid var(--border);
     }
 
     .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.09);
+      background: rgba(255, 255, 255, 0.08);
       border-color: var(--border-hover);
       transform: translateY(-2px);
     }
 
-    /* Focus Bar */
-    .trust-bar {
-      margin-top: 40px;
-      padding-top: 30px;
+    /* Highlights Bar */
+    .highlights-bar {
+      margin-top: 48px;
+      padding-top: 28px;
       border-top: 1px solid rgba(255, 255, 255, 0.06);
       display: flex;
       justify-content: center;
@@ -215,23 +223,32 @@
       font-size: 0.88rem;
     }
 
-    .trust-bar span i {
-      color: var(--accent);
-      margin-right: 8px;
+    .highlights-bar span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
 
-    /* Products Section */
-    .products {
-      padding: 70px 0 100px;
+    .highlights-bar svg {
+      width: 16px;
+      height: 16px;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* Sections */
+    .section {
+      padding: 64px 0;
+      scroll-margin-top: 84px;
     }
 
     .section-header {
       text-align: center;
-      margin-bottom: 56px;
+      margin-bottom: 48px;
     }
 
     .section-header h2 {
-      font-size: 2.3rem;
+      font-size: clamp(1.85rem, 3.2vw, 2.35rem);
       font-weight: 700;
       letter-spacing: -0.5px;
       margin-bottom: 10px;
@@ -239,60 +256,40 @@
 
     .section-header p {
       color: var(--text-muted);
-      max-width: 600px;
+      max-width: 580px;
+      margin: 0 auto;
+      font-size: 0.98rem;
+    }
+
+    /* Projects / Upcoming Releases */
+    .upcoming-card {
+      background: linear-gradient(135deg, rgba(18, 27, 47, 0.78), rgba(10, 15, 28, 0.88));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 48px 40px;
+      backdrop-filter: blur(14px);
+      text-align: center;
+      max-width: 820px;
       margin: 0 auto;
     }
 
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-      gap: 36px;
-    }
-
-    .product-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 40px;
-      backdrop-filter: blur(14px);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: var(--transition);
-      position: relative;
-    }
-
-    .product-card:hover {
-      transform: translateY(-6px);
-      border-color: var(--border-hover);
-      box-shadow: 0 24px 50px -15px rgba(0, 0, 0, 0.8);
-    }
-
-    .product-card.temp-card:hover {
-      box-shadow: 0 24px 50px -15px var(--temp-glow);
-    }
-
-    .product-card.trigger-card:hover {
-      box-shadow: 0 24px 50px -15px var(--trigger-glow);
-    }
-
-    .card-header-flex {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 16px;
-    }
-
     .status-badge {
-      font-size: 0.76rem;
+      font-size: 0.74rem;
       font-weight: 700;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      padding: 6px 12px;
+      padding: 6px 13px;
       border-radius: 9999px;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 7px;
+      margin-bottom: 20px;
+    }
+
+    .status-badge.in-dev {
+      background: rgba(56, 189, 248, 0.12);
+      color: #7dd3fc;
+      border: 1px solid rgba(56, 189, 248, 0.28);
     }
 
     .status-badge.live {
@@ -305,95 +302,83 @@
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      background: #22c55e;
-      box-shadow: 0 0 8px #22c55e;
+      background: currentColor;
+      box-shadow: 0 0 8px currentColor;
     }
 
-    .domain-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-family: monospace;
-      font-size: 0.85rem;
-      color: var(--accent);
-      background: rgba(56, 189, 248, 0.1);
-      padding: 4px 10px;
-      border-radius: 6px;
-      margin-bottom: 16px;
-      width: fit-content;
-      border: 1px solid rgba(56, 189, 248, 0.2);
-      text-decoration: none;
+    .upcoming-card h3 {
+      font-size: 1.65rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: -0.3px;
+    }
+
+    .upcoming-card p {
+      color: var(--text-muted);
+      max-width: 560px;
+      margin: 0 auto;
+      font-size: 0.97rem;
+    }
+
+    /* Ready-to-use Product Grid & Card Styles (for when apps are live) */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 32px;
+    }
+
+    .product-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px;
+      backdrop-filter: blur(14px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       transition: var(--transition);
     }
 
-    .domain-badge:hover {
-      background: rgba(56, 189, 248, 0.2);
+    .product-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--border-hover);
+      box-shadow: 0 24px 50px -15px rgba(0, 0, 0, 0.75);
+    }
+
+    .card-header-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
     }
 
     .product-card h3 {
-      font-size: 2rem;
+      font-size: 1.7rem;
       font-weight: 700;
-      margin-bottom: 4px;
     }
 
-    .sub-pitch {
-      font-size: 0.95rem;
+    .product-card .sub-pitch {
+      font-size: 0.94rem;
       font-weight: 600;
       color: var(--accent);
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       display: block;
     }
 
     .product-card p.description {
       color: var(--text-muted);
-      font-size: 0.96rem;
-      line-height: 1.65;
+      font-size: 0.95rem;
       margin-bottom: 24px;
-    }
-
-    .feature-list {
-      list-style: none;
-      margin-bottom: 30px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .feature-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 0.92rem;
-      color: #cbd5e1;
-    }
-
-    .feature-list li i {
-      color: var(--accent);
-      font-size: 0.9rem;
-      margin-top: 4px;
-      flex-shrink: 0;
-    }
-
-    .statutory-callout {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 12px;
-      padding: 14px 16px;
-      font-size: 0.85rem;
-      color: #94a3b8;
-      margin-bottom: 26px;
-    }
-
-    .statutory-callout strong {
-      color: #e2e8f0;
     }
 
     .card-footer {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 16px;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
-      padding-top: 22px;
+      padding-top: 20px;
     }
 
     .launch-btn {
@@ -402,10 +387,10 @@
       gap: 8px;
       background: rgba(255, 255, 255, 0.07);
       color: #fff;
-      padding: 11px 20px;
+      padding: 10px 18px;
       border-radius: 10px;
       text-decoration: none;
-      font-size: 0.94rem;
+      font-size: 0.92rem;
       font-weight: 600;
       border: 1px solid rgba(255, 255, 255, 0.12);
       transition: var(--transition);
@@ -418,134 +403,141 @@
       transform: translateY(-2px);
     }
 
-    /* Standards Deep Dive */
-    .comparison-section {
-      padding: 30px 0 90px;
-    }
-
-    .comparison-grid {
+    /* Approach Grid */
+    .principles-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 28px;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 26px;
     }
 
-    .comp-card {
-      background: linear-gradient(135deg, rgba(14, 21, 38, 0.7), rgba(7, 10, 19, 0.8));
+    .principle-card {
+      background: linear-gradient(135deg, rgba(14, 21, 38, 0.72), rgba(7, 10, 19, 0.84));
       border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 32px;
+      transition: var(--transition);
     }
 
-    .comp-card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 12px;
-      display: flex;
+    .principle-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-3px);
+    }
+
+    .principle-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.22);
+      display: inline-flex;
       align-items: center;
-      gap: 10px;
-    }
-
-    .comp-card h3 i {
+      justify-content: center;
       color: var(--accent);
-    }
-
-    .comp-card p {
-      color: var(--text-muted);
-      font-size: 0.94rem;
       margin-bottom: 18px;
     }
 
-    .comp-card ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      color: #cbd5e1;
-      font-size: 0.88rem;
+    .principle-icon svg {
+      width: 21px;
+      height: 21px;
     }
 
-    .comp-card ul li {
-      display: flex;
-      align-items: center;
-      gap: 8px;
+    .principle-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
     }
 
-    .comp-card ul li i {
-      color: #22c55e;
+    .principle-card p {
+      color: var(--text-muted);
+      font-size: 0.94rem;
     }
 
-    /* Studio Philosophy */
+    /* About Studio */
+    .about-section {
+      padding: 36px 0 96px;
+      scroll-margin-top: 84px;
+    }
+
     .craft-box {
-      background: linear-gradient(135deg, rgba(14, 21, 38, 0.8), rgba(7, 10, 19, 0.9));
+      background: linear-gradient(135deg, rgba(14, 21, 38, 0.82), rgba(7, 10, 19, 0.92));
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 50px 40px;
-      margin-bottom: 90px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-
-    .craft-content {
-      flex: 1;
-      min-width: 300px;
+      padding: 48px 44px;
     }
 
     .craft-content h2 {
-      font-size: 2rem;
+      font-size: clamp(1.7rem, 3vw, 2.05rem);
       font-weight: 700;
       margin-bottom: 14px;
+      letter-spacing: -0.4px;
     }
 
     .craft-content p {
       color: var(--text-muted);
-      margin-bottom: 24px;
+      max-width: 760px;
+      margin-bottom: 16px;
+      font-size: 0.98rem;
     }
 
-    .stats-row {
+    .studio-note {
+      display: inline-block;
+      margin-top: 4px;
+      margin-bottom: 30px;
+      font-size: 0.9rem;
+      color: #cbd5e1;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 12px 16px;
+    }
+
+    .pillars-row {
       display: flex;
-      gap: 40px;
+      gap: 44px;
       flex-wrap: wrap;
+      padding-top: 26px;
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
     }
 
-    .stat-item h4 {
-      font-size: 1.8rem;
-      font-weight: 800;
+    .pillar-item h4 {
+      font-size: 1.25rem;
+      font-weight: 700;
       color: var(--accent);
+      margin-bottom: 2px;
     }
 
-    .stat-item p {
-      font-size: 0.85rem;
+    .pillar-item p {
+      font-size: 0.86rem;
       color: var(--text-muted);
+      margin: 0;
     }
 
     /* Footer */
     footer {
       border-top: 1px solid var(--border);
-      padding: 60px 0 30px;
+      padding: 56px 0 28px;
       background: #05070e;
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 2fr repeat(2, 1fr);
+      grid-template-columns: 2fr 1fr 1fr;
       gap: 40px;
-      margin-bottom: 40px;
+      margin-bottom: 38px;
     }
 
     .footer-brand p {
       color: var(--text-muted);
-      font-size: 0.92rem;
+      font-size: 0.91rem;
       margin-top: 14px;
       max-width: 380px;
     }
 
     .footer-col h4 {
-      font-size: 0.95rem;
+      font-size: 0.85rem;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 18px;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
       color: #fff;
     }
 
@@ -556,7 +548,8 @@
       gap: 10px;
     }
 
-    .footer-col ul a {
+    .footer-col ul a,
+    .footer-col ul li {
       color: var(--text-muted);
       text-decoration: none;
       font-size: 0.9rem;
@@ -569,17 +562,44 @@
 
     .footer-bottom {
       text-align: center;
-      padding-top: 30px;
+      padding-top: 26px;
       border-top: 1px solid rgba(255, 255, 255, 0.05);
       color: var(--text-muted);
-      font-size: 0.85rem;
+      font-size: 0.84rem;
     }
 
-    @media (max-width: 820px) {
-      .nav-links { display: none; }
-      .footer-grid { grid-template-columns: 1fr; }
-      .product-grid { grid-template-columns: 1fr; }
-      .hero { padding: 130px 0 50px; }
+    @media (max-width: 780px) {
+      .nav-container {
+        height: 68px;
+      }
+
+      .nav-links {
+        gap: 18px;
+      }
+
+      .nav-links a {
+        font-size: 0.86rem;
+      }
+
+      .hero {
+        padding: 132px 0 60px;
+      }
+
+      .upcoming-card,
+      .craft-box {
+        padding: 32px 24px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nav-links {
+        display: none;
+      }
     }
   </style>
 </head>
@@ -590,7 +610,7 @@
     <div class="container nav-container">
       <a href="#" class="brand-logo">
         <!-- Tidecraft SVG Vector Logo -->
-        <svg width="38" height="38" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <defs>
             <linearGradient id="tideGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stop-color="#38bdf8" />
@@ -609,255 +629,225 @@
         Tidecraft<span>Software</span>
       </a>
 
-      <ul class="nav-links">
-        <li><a href="#portfolio">Our Products</a></li>
-        <li><a href="#compliance">Statutory Frameworks</a></li>
-        <li><a href="#about">About Studio</a></li>
-        <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
-      </ul>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#approach">Approach</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <h1>Ditch the Paper Binders.<br><span class="gradient-text">Statutory UK Compliance in 2 Taps.</span></h1>
-      <p>
-        Tidecraft Software engineers purpose-built, high-velocity web applications for UK commercial operators. We replace fragile paper records with instantaneous, audit-ready digital registers that inspectors love.
-      </p>
-      <div class="hero-actions">
-        <a href="#portfolio" class="btn btn-primary">
-          <i class="fa-solid fa-shapes"></i> Explore Portfolio
-        </a>
-        <a href="#compliance" class="btn btn-secondary">
-          <i class="fa-solid fa-gavel"></i> Regulatory Standards
-        </a>
-      </div>
-
-      <div class="trust-bar">
-        <span><i class="fa-solid fa-shield-halved"></i> Food Standards Agency SFBB Compliant</span>
-        <span><i class="fa-solid fa-scale-balanced"></i> HSE Control of Vibration (2005) Compliant</span>
-        <span><i class="fa-solid fa-cloud-arrow-up"></i> Instant 1-Click PDF Inspection Packs</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="products">
-    <div class="container">
-      <div class="section-header">
-        <h2>Our Software Portfolio</h2>
-        <p>Production web applications designed for frontline workers, kitchen staff, and site supervisors. Zero training required.</p>
-      </div>
-
-      <div class="product-grid">
-
-        <!-- TempDiary Card -->
-        <article class="product-card temp-card">
-          <div>
-            <div class="card-header-flex">
-              <h3>TempDiary</h3>
-              <span class="status-badge live">
-                <span class="status-dot"></span> Live Product
-              </span>
-            </div>
-
-            <a href="https://tempdiary.co.uk" target="_blank" rel="noopener noreferrer" class="domain-badge">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i> tempdiary.co.uk
-            </a>
-            
-            <span class="sub-pitch">Commercial Kitchen Food Hygiene & SFBB Diary</span>
-            <p class="description">
-              Ditch the greasy blue FSA binder. TempDiary is the dead-simple mobile temperature diary built for UK bakeries, cafes, restaurants, and dark kitchens. Takes staff under 30 seconds every morning.
-            </p>
-
-            <div class="statutory-callout">
-              <strong>FSA & EHO Compliance:</strong> Satisfies mandatory HACCP cold-holding checks (0°C–5°C target buffer, 8.0°C legal limit) under the Food Safety and Hygiene (England) Regulations.
-            </div>
-
-            <ul class="feature-list">
-              <li>
-                <i class="fa-solid fa-circle-check"></i>
-                <span><strong>Sign Opening & Closing Checks:</strong> 1-tap staff timestamp attribution to prove live morning compliance without retrospective guessing.</span>
-              </li>
-              <li>
-                <i class="fa-solid fa-circle-check"></i>
-                <span><strong>Mandatory Corrective Action Prompts:</strong> If a fridge runs warm (&gt;8°C), the system flags alerts and logs remediation on the spot.</span>
-              </li>
-              <li>
-                <i class="fa-solid fa-circle-check"></i>
-                <span><strong>1-Click EHO Inspection Packs:</strong> Instantly compile and email formatted 30-day SFBB PDF reports when the local council inspector walks in.</span>
-              </li>
-              <li>
-                <i class="fa-solid fa-circle-check"></i>
-                <span><strong>Unlimited Kitchen Scale:</strong> Unlimited fridges, freezers, sandwich counters, and staff devices with encrypted 6-month FSA cloud retention.</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="card-footer">
-            <span style="font-size: 0.85rem; color: var(--text-muted);"><i class="fa-solid fa-mobile-screen"></i> Mobile PWA • iPhone, iPad & Android</span>
-            <a href="https://tempdiary.co.uk" target="_blank" rel="noopener noreferrer" class="launch-btn">
-              Visit tempdiary.co.uk <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-        </article>
-
-        <!-- TriggerTrack Card -->
-        <article class="product-card trigger-card">
-          <div>
-            <div class="card-header-flex">
-              <h3>TriggerTrack</h3>
-              <span class="status-badge live">
-                <span class="status-dot"></span> Live Product
-              </span>
-            </div>
-
-            <a href="https://triggertrack.co.uk" target="_blank" rel="noopener noreferrer" class="domain-badge">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i> triggertrack.co.uk
-            </a>
-            
-            <span class="sub-pitch">Statutory HAVS & Tool Vibration Compliance</span>
-            <p class="description">
-              Ditch paper site clipboards. TriggerTrack calculates statutory Health and Safety Executive (HSE) vibration exposure points in real time on site, flags dangerous overruns, and protects against personal injury claims.
-            </p>
-
-            <div class="statutory-callout">
-              <strong>Control of Vibration at Work Regulations 2005:</strong> Real-time tracking against the 100 pt EAV (Exposure Action Value) and 400 pt ELV (Exposure Limit Value).
-            </div>
-
-            <ul class="feature-list">
-              <li>
-                <i class="fa-solid fa-circle-check"></i>
-                <span><strong>Pre-Loaded UK Fleet Catalog:</strong> Pre-calibrated m/s² vibration ratings for Stihl cut-off saws, Hilti breakers, JCB hydraulic units, and Wacker plates.</span>
-              </li>
-              <li>
-                <i class="fa-solid fa-circle-check"></i>
-                <span><strong>Instant Live HSE Point Calculation:</strong> Site supervisors select the operative, pick the tool, and slide runtime for automatic point totals.</span>
-              </li>
-              <li>
-                <i class="fa-solid fa-circle-check"></i>
-                <span><strong>Statutory EAV/ELV Overrun Alerts:</strong> Warns when an operative nears 100 points and enforces mandatory cessation before hitting 400 points.</span>
-              </li>
-              <li>
-                <i class="fa-solid fa-circle-check"></i>
-                <span><strong>HSE & Occupational Health Audit PDFs:</strong> 1-click exposure ledgers for HSE inspectors, occupational health surveillance, and insurers.</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="card-footer">
-            <span style="font-size: 0.85rem; color: var(--text-muted);"><i class="fa-solid fa-hard-hat"></i> On-Site Shift PWA • Multi-Squad Logging</span>
-            <a href="https://triggertrack.co.uk" target="_blank" rel="noopener noreferrer" class="launch-btn">
-              Visit triggertrack.co.uk <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Statutory Regulations Deep Dive -->
-  <section id="compliance" class="comparison-section container">
-    <div class="section-header">
-      <h2>Engineered for Strict UK Compliance</h2>
-      <p>Paper records fail during unannounced council and HSE audits. Our digital architectures are built specifically to satisfy legal standards.</p>
-    </div>
-
-    <div class="comparison-grid">
-      <div class="comp-card">
-        <h3><i class="fa-solid fa-utensils"></i> UK Food Hygiene & SFBB</h3>
-        <p>Food businesses risk dropping from a 5-star to a 3-star rating or receiving council improvement notices due to sloppy paper temp logs.</p>
-        <ul>
-          <li><i class="fa-solid fa-check"></i> Eliminates retrospectively filled binder sheets</li>
-          <li><i class="fa-solid fa-check"></i> Proves due diligence with mandatory corrective notes</li>
-          <li><i class="fa-solid fa-check"></i> Full 6-month FSA historical archive on demand</li>
-        </ul>
-      </div>
-
-      <div class="comp-card">
-        <h3><i class="fa-solid fa-triangle-exclamation"></i> HSE HAVS & Vibration Rules</h3>
-        <p>Hand-Arm Vibration Syndrome (HAVS) causes permanent disability. Falsified paper records leave contractors exposed to severe liability.</p>
-        <ul>
-          <li><i class="fa-solid fa-check"></i> Automated calculation of 100 pt EAV & 400 pt ELV thresholds</li>
-          <li><i class="fa-solid fa-check"></i> Live site supervisor logging across multiple squads</li>
-          <li><i class="fa-solid fa-check"></i> Contemporary proof for insurers and occupational health</li>
-        </ul>
-      </div>
-
-      <div class="comp-card">
-        <h3><i class="fa-solid fa-bolt"></i> Progressive Web Architecture</h3>
-        <p>No app store downloads, updates, or device compatibility headaches. Frontline staff open the web app and start logging in under 30 seconds.</p>
-        <ul>
-          <li><i class="fa-solid fa-check"></i> Direct installation to smartphone home screens</li>
-          <li><i class="fa-solid fa-check"></i> Bank-grade encrypted cloud sync backed by Supabase</li>
-          <li><i class="fa-solid fa-check"></i> Offline-resilient operation for basements and remote sites</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Studio -->
-  <section id="about" class="container">
-    <div class="craft-box">
-      <div class="craft-content">
-        <h2>The Tidecraft Ethos</h2>
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-eyebrow">Independent Software Studio</div>
+        <h1>Thoughtful Software.<br><span class="gradient-text">Built Simply &amp; With Care.</span></h1>
         <p>
-          We are an independent software development studio based in the United Kingdom. We do not build bloated, generic enterprise platforms. We craft fast, razor-focused micro-SaaS tools designed to eliminate legal, safety, and operational friction for real-world industries.
+          Tidecraft Software is an independent studio designing and building focused, lightweight web applications and digital tools. Clean interfaces, dependable engineering, and no unnecessary clutter.
         </p>
-        <div class="stats-row">
-          <div class="stat-item">
-            <h4>&lt; 30s</h4>
-            <p>Daily Routine Speed</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+              <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+              <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+              <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+            </svg>
+            View Projects
+          </a>
+          <a href="#about" class="btn btn-secondary">
+            About the Studio
+          </a>
+        </div>
+
+        <div class="highlights-bar">
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+            In-House Products Only
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            Modern Web Applications
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            Privacy-Minded Design
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Software &amp; Releases</h2>
+          <p>A home for our independent web applications and software releases.</p>
+        </div>
+
+        <div class="upcoming-card">
+          <span class="status-badge in-dev">
+            <span class="status-dot"></span> In Development
+          </span>
+          <h3>New Releases Coming Soon</h3>
+          <p>
+            We are currently working on our next set of web applications. Once they are ready and live, links and details will be published right here.
+          </p>
+        </div>
+
+        <!--
+        LIVE PRODUCT TEMPLATE — Replace the .upcoming-card block above with this .product-grid when apps launch:
+
+        <div class="product-grid">
+          <article class="product-card">
+            <div>
+              <div class="card-header-flex">
+                <h3>App Name</h3>
+                <span class="status-badge live">
+                  <span class="status-dot"></span> Live
+                </span>
+              </div>
+              <span class="sub-pitch">Short tagline</span>
+              <p class="description">
+                Brief description of what the application does.
+              </p>
+            </div>
+            <div class="card-footer">
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Web Application</span>
+              <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="launch-btn">
+                Open App &rarr;
+              </a>
+            </div>
+          </article>
+        </div>
+        -->
+      </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section id="approach" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>How We Build</h2>
+          <p>Every project starts with a clear purpose and aims to stay fast, reliable, and easy to use.</p>
+        </div>
+
+        <div class="principles-grid">
+          <div class="principle-card">
+            <div class="principle-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="6"></circle>
+                <circle cx="12" cy="12" r="2"></circle>
+              </svg>
+            </div>
+            <h3>Focused by Design</h3>
+            <p>Each application is crafted around a clear core purpose, avoiding unnecessary features and keeping interfaces clean and intuitive.</p>
           </div>
-          <div class="stat-item">
-            <h4>1-Click</h4>
-            <p>Inspection Audit PDFs</p>
+
+          <div class="principle-card">
+            <div class="principle-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <h3>Lightweight &amp; Fast</h3>
+            <p>Built on modern web standards for responsive performance, quick load times, and smooth operation across everyday devices.</p>
           </div>
-          <div class="stat-item">
-            <h4>100%</h4>
-            <p>UK Statutory Alignment</p>
+
+          <div class="principle-card">
+            <div class="principle-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3>Practical &amp; Dependable</h3>
+            <p>Designed with care for usability, stability, and respect for users&rsquo; time and privacy&mdash;without bloat or dark patterns.</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- About Studio -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="craft-box">
+          <div class="craft-content">
+            <h2>About Tidecraft Software</h2>
+            <p>
+              Tidecraft Software is an independent, UK-based software studio dedicated to creating and maintaining our own digital tools and web applications.
+            </p>
+            <div class="studio-note">
+              Please note: Tidecraft Software develops and publishes its own in-house projects only and does not offer client development, consulting, or public services.
+            </div>
+            <div class="pillars-row">
+              <div class="pillar-item">
+                <h4>In-House</h4>
+                <p>Original studio projects only</p>
+              </div>
+              <div class="pillar-item">
+                <h4>Web-First</h4>
+                <p>Built on open web standards</p>
+              </div>
+              <div class="pillar-item">
+                <h4>Independent</h4>
+                <p>Self-directed &amp; UK-based</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer id="contact">
+  <footer>
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="#" class="brand-logo">
-            <svg width="28" height="28" viewBox="0 0 100 100" fill="none">
+            <svg width="28" height="28" viewBox="0 0 100 100" fill="none" aria-hidden="true">
               <path d="M10 50C25 25 55 20 70 35C82 48 88 40 92 30C95 60 75 80 50 80C28 80 15 68 10 50Z" fill="#38bdf8"/>
             </svg>
             Tidecraft<span>Software</span>
           </a>
-          <p>UK-based independent software studio. Transforming compliance logging in commercial catering, civil engineering, and construction.</p>
+          <p>Independent UK-based software studio designing and publishing focused web applications.</p>
         </div>
 
         <div class="footer-col">
-          <h4>SaaS Products</h4>
+          <h4>Navigation</h4>
           <ul>
-            <li><a href="https://tempdiary.co.uk" target="_blank" rel="noopener noreferrer">TempDiary (tempdiary.co.uk)</a></li>
-            <li><a href="https://triggertrack.co.uk" target="_blank" rel="noopener noreferrer">TriggerTrack (triggertrack.co.uk)</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#approach">Approach</a></li>
+            <li><a href="#about">About</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Studio & Inquiries</h4>
+          <h4>Studio</h4>
           <ul>
-            <li><a href="mailto:support@tempdiary.co.uk">TempDiary Support</a></li>
-            <li><a href="mailto:support@triggertrack.co.uk">TriggerTrack Support</a></li>
-            <li><a href="mailto:contact@tidecraftsoftware.com">Company Inquiries</a></li>
+            <li>In-house products only</li>
+            <li>Not available for client work</li>
+            <li><a href="mailto:contact@tidecraftsoftware.com">contact@tidecraftsoftware.com</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        &copy; 2026 Tidecraft Software. Handcrafted for statutory UK compliance.
+        &copy; 2026 Tidecraft Software. All rights reserved.
       </div>
     </div>
   </footer>
